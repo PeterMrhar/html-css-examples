@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Custom Numbered List</title>
+<style>
+  /* Reset the counter named 'item' at the start of the list */
+  ol {
+    counter-reset: item;
+  }
+
+  /* Remove the default list markers and increment the counter for each list item */
+  li {
+    list-style: none;
+    counter-increment: item;
+  }
+
+  /* Before each list item, insert the counter value followed by a period */
+  li::before {
+    content: counter(item) ". ";
+    font-weight: bold;
+    color: orange;
+  }
+</style>
+</head>
+<body>
+
+<h2>Custom Numbered List</h2>
+
+<ol>
+  <li>First item in the list, now with a custom number marker.</li>
+  <li>Second item in the list, using a manually styled number.</li>
+  <li>Third item in the list, with a bold and orange number marker.</li>
+  <li>Fourth item in the list, maintaining the same custom style.</li>
+</ol>
+
+</body>
+</html>

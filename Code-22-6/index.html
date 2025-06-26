@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Image with Width Limits</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .container img {
+      width: 100%;
+      max-width: 600px;
+      min-width: 200px;
+      height: auto;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Responsive Image</h1>
+  <p>This image adapts to the screen size, but never exceeds 600 pixels or goes below 200 pixels in width.</p>
+  <img src="images/Lazy1.jpg" alt="Sample image">
+</div>
+
+</body>
+</html>

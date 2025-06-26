@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Model Examples</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 1.2em;
+    }
+
+    .hex   { color: #ff0000; }                      /* HEX notation */
+    .rgb   { color: rgb(255, 0, 0); }                /* RGB model */
+    .hsl   { color: hsl(0, 100%, 50%); }             /* HSL model */
+    .lab   { color: lab(53.2% 80.1 67.2); }          /* LAB model (CSS Color 4) */
+    .lch   { color: lch(53.2% 104.6 40.0); }         /* LCH model (CSS Color 4) */
+    .named { color: red; }                           /* Named color */
+  </style>
+</head>
+<body>
+  <p class="hex">This is red using HEX notation.</p>
+  <p class="rgb">This is red using the RGB model.</p>
+  <p class="hsl">This is red using the HSL model.</p>
+  <p class="lab">This is red using the LAB model (CSS Color 4).</p>
+  <p class="lch">This is red using the LCH model (CSS Color 4).</p>
+  <p class="named">This is red using the named color.</p>
+</body>
+</html>

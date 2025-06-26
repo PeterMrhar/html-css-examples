@@ -1,0 +1,23 @@
+/* Use the Merriweather serif font for the whole page */
+body {
+  font-family: 'Merriweather', serif;
+  background-color: #fdfdfd;
+  color: #333;
+  margin: 2em;
+}
+
+/* Styled heading */
+h1 {
+  font-size: 2em;
+  color: darkred;
+  background-color: #fff0f0;
+  padding: 0.5em;
+  border-left: 5px solid darkred;
+}
+
+/* Styled paragraph */
+p {
+  font-size: 1.125em;
+  margin-left: 20px;
+  line-height: 1.6;
+}

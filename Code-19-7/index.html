@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>List with CSS Variables</title>
+<style>
+  :root {
+    --blue-color: blue;
+    --green-color: lightgreen;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li::before {
+    content: "• ";
+    font-size: 1.5em;
+  }
+
+  li:nth-child(odd)::before {
+    color: var(--blue-color);
+  }
+
+  li:nth-child(even)::before {
+    color: var(--green-color);
+  }
+</style>
+</head>
+<body>
+
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+  <li>Fourth item</li>
+  <li>Fifth item</li>
+</ul>
+
+</body>
+</html>

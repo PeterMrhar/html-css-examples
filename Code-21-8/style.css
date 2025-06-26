@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  grid-template-rows: 80px 1fr 60px;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+main {
+  grid-area: content;
+  background-color: white;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+footer {
+  grid-area: footer;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Animated list</title>
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 8px;
+      transition: background-color 0.3s, transform 0.3s;
+      border-radius: 5px;
+    }
+
+    li::before {
+      content: "★ ";
+      color: orange;
+      font-size: 1.2em;
+    }
+
+    li:hover {
+      background-color: #f0f8ff;
+      transform: translateX(10px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+    <li>Fourth item</li>
+  </ul>
+
+</body>
+
+</html>

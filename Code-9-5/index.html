@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Webpage with ARIA and tabindex</title>
+</head>
+<body>
+    <h1>Welcome to the Accessible Webpage (tabindex version)</h1>
+
+    <div role="banner" aria-label="Website Header">
+        <h2>Website Header</h2>
+        <nav role="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#content" tabindex="0">Skip to Content</a></li>
+                <li><a href="#contact" tabindex="0">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main id="content" tabindex="-1">
+        <h2>Search Section</h2>
+        <input type="search" placeholder="Search..." aria-label="Search field" oninput="showResult(this.value)">
+        <div aria-live="polite" id="searchResult">Type a term to search.</div>
+
+        <h2>Dialog Section</h2>
+        <div role="dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDesc">
+            <h3 id="dialogTitle">Newsletter Signup</h3>
+            <p id="dialogDesc">Enter your email to receive our latest updates.</p>
+            <input type="email" aria-label="Email address" placeholder="Email">
+            <button aria-label="Submit" tabindex="0">Submit</button>
+        </div>
+    </main>
+
+    <footer role="contentinfo" aria-label="Website Footer" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com</p>
+    </footer>
+
+    <script>
+        function showResult(value) {
+            const result = document.getElementById("searchResult");
+            result.textContent = "Searching for: " + value;
+        }
+    </script>
+</body>
+</html>

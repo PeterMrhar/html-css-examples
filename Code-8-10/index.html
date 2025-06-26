@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+.dropBox {
+  width: 150px;         /* širina okenca */
+  height: 50px;         /* višina okenca */
+  border: 1px solid #aaaaaa;  /* siva obroba */
+}
+  </style>
+</head>
+<body>
+
+<p id="draggable" draggable="true"
+   ondrag="onDrag(event)"
+   ondragend="onDragEnd(event)">
+  Drag me
+</p>
+
+<div class="dropBox"
+     ondragenter="onDragEnter(event)"
+     ondragleave="onDragLeave(event)"
+     ondragover="event.preventDefault()">
+  Drop area
+</div>
+
+<script>
+  function onDrag(event) {
+    console.log("Dragging...");
+  }
+
+  function onDragEnd(event) {
+    alert("Drag ended!");
+  }
+
+  function onDragEnter(event) {
+    event.target.textContent = "Come here!";
+  }
+
+  function onDragLeave(event) {
+    event.target.textContent = "Wait! Where are you going?";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic z-index</title>
+    <style>
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box" id="box1" style="top: 50px; left: 50px; background-color: red;"></div>
+<div class="box" id="box2" style="top: 80px; left: 80px; background-color: blue;"></div>
+
+<button onclick="bringToFront('box1')">Bring Red to Front</button>
+<button onclick="bringToFront('box2')">Bring Blue to Front</button>
+
+<script>
+    let zIndexCounter = 1;
+
+    function bringToFront(elementId) {
+        zIndexCounter++;
+        document.getElementById(elementId).style.zIndex = zIndexCounter;
+    }
+</script>
+
+</body>
+</html>

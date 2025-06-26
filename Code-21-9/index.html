@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Framework Button Comparison</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <style>
+    body {
+      padding: 2rem;
+    }
+
+    p {
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p>
+    Bootstrap is the most widely used CSS framework. It comes with a rich set of components and is easy to use out of
+    the box.
+  </p>
+  <button class="btn btn-primary">Click me!</button>
+
+  <p>
+    Tailwind is the second most popular framework. It is a bit more complex to use but gives you complete control over
+    design.
+  </p>
+  <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+    Click me!
+  </button>
+
+  <p>
+    Bulma is a clean and modern framework that doesn’t rely on JavaScript. It’s based on Flexbox and very lightweight.
+  </p>
+  <button class="button is-primary">Click me!</button>
+
+</body>
+
+</html>

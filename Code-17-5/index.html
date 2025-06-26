@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example of CSS round() with @supports</title>
+  <style>
+    .box {
+      width: 100px;
+      margin: 10px;
+      background-color: lightblue;
+      display: inline-block;
+      text-align: center;
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    /* Default height if the browser does not support round() */
+    .box {
+      height: 100px;
+    }
+
+    /* If the browser supports round(), use advanced height values */
+    @supports (height: round(0px, 1px)) {
+      .box.up {
+        height: round(up, 105px, 25px);    /* 125px */
+      }
+
+      .box.down {
+        height: round(down, 119px, 25px);  /* 100px */
+      }
+
+      .box.nearest {
+        height: round(117px, 25px);        /* 125px */
+      }
+
+      .box.zero {
+        height: round(to-zero, 115px, 25px); /* 100px */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box up">Up</div>
+  <div class="box down">Down</div>
+  <div class="box nearest">Nearest</div>
+  <div class="box zero">To-Zero</div>
+
+</body>
+</html>

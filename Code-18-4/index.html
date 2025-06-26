@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Table as Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    thead {
+      background-color: #0077cc;
+      color: white;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead tr {
+        display: none;
+      }
+
+      tbody tr {
+        margin-bottom: 15px;
+        border: 2px solid #0077cc;
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Responsive Subscription Table</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subscription Type</th>
+      <th>Duration</th>
+      <th>Price</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Subscription Type">Monthly</td>
+      <td data-label="Duration">1 month</td>
+      <td data-label="Price">€9.99</td>
+      <td data-label="Description">Basic subscription for one month.</td>
+    </tr>
+    <tr>
+      <td data-label="Subscription Type">Quarterly</td>
+      <td data-label="Duration">3 months</td>
+      <td data-label="Price">€24.99</td>
+      <td data-label="Description">Save more with a longer period.</td>
+    </tr>
+    <tr>
+      <td data-label="Subscription Type">Yearly</td>
+      <td data-label="Duration">12 months</td>
+      <td data-label="Price">€79.99</td>
+      <td data-label="Description">Best long-term value for regular use.</td>
+    </tr>
+    <tr>
+      <td data-label="Subscription Type">Two-Year</td>
+      <td data-label="Duration">24 months</td>
+      <td data-label="Price">€139.99</td>
+      <td data-label="Description">Top value for long-term commitment.</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

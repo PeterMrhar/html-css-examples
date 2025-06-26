@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Color 4 Functions</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .lab {
+      background-color: lab(70% 40 30);
+      color: black;
+      padding: 1em;
+      margin-bottom: 1em;
+    }
+
+    .lch {
+      background-color: lch(70% 60 40);
+      color: black;
+      padding: 1em;
+      margin-bottom: 1em;
+    }
+
+    .oklch {
+      background-color: oklch(0.7 0.15 35);
+      color: black;
+      padding: 1em;
+      margin-bottom: 1em;
+    }
+
+    .display-p3 {
+      background-color: color(display-p3 1 0.5 0.5 / 0.8);
+      color: black;
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lab">This background uses <code>lab()</code></div>
+  <div class="lch">This background uses <code>lch()</code></div>
+  <div class="oklch">This background uses <code>oklch()</code></div>
+  <div class="display-p3">This background uses <code>color(display-p3 ...)</code></div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Container Query Button Demo</title>
+  <style>
+    /* Enable container queries */
+    .button-container {
+      container-type: inline-size;
+      width: 200px; /* Try changing this to 90px to see the effect */
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 2em auto;
+      resize: horizontal;
+      overflow: auto;
+    }
+
+    /* Basic button style */
+    .more-button {
+      font-size: 1rem;
+      padding: 0.5em 1em;
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      cursor: pointer;
+    }
+
+    .more-button .icon {
+      font-weight: bold;
+    }
+
+    /* Container query: hide the label on narrow containers */
+    @container (max-width: 100px) {
+      .more-button .label {
+        display: none;
+      }
+
+      .more-button {
+        padding: 0.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">Container Query Button Demo</h2>
+
+  <div class="button-container" style="resize: horizontal;">
+    <button class="more-button">
+      <span class="icon">⋯</span>
+      <span class="label">More</span>
+    </button>
+  </div>
+
+  <p style="text-align: center;">Resize the container to see the label disappear.</p>
+
+</body>
+</html>

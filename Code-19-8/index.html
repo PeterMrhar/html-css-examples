@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>House Building Timeline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    ul.timeline {
+      list-style: none;
+      padding: 0;
+      position: relative;
+      margin-left: 30px;
+    }
+
+    ul.timeline::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: #0077cc;
+    }
+
+    ul.timeline li {
+      position: relative;
+      margin-bottom: 30px;
+      padding-left: 20px;
+    }
+
+    ul.timeline li::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 4px;
+      width: 14px;
+      height: 14px;
+      background-color: white;
+      border: 4px solid #0077cc;
+      border-radius: 50%;
+    }
+
+    ul.timeline li h3 {
+      margin: 0 0 5px;
+      font-size: 1.2em;
+    }
+
+    ul.timeline li p {
+      margin: 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<h1>House Building Timeline</h1>
+
+<ul class="timeline">
+  <li>
+    <h3>1. Planning and Permits</h3>
+    <p>Architectural design, construction permit application, and budgeting.</p>
+  </li>
+  <li>
+    <h3>2. Excavation and Foundations</h3>
+    <p>Clearing the site, digging, and pouring the concrete foundations.</p>
+  </li>
+  <li>
+    <h3>3. Structural Construction</h3>
+    <p>Building walls, floors, and installing roof structures.</p>
+  </li>
+  <li>
+    <h3>4. Installations</h3>
+    <p>Electrical wiring, plumbing, heating and cooling systems.</p>
+  </li>
+</ul>
+
+</body>
+</html>

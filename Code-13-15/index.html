@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overflow Example</title>
+<style>
+  .container {
+    width: 200px;
+    height: 100px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+  }
+
+  .visible {
+    overflow: visible;
+  }
+
+  .hidden {
+    overflow: hidden;
+  }
+
+  .scroll {
+    overflow: scroll;
+  }
+
+  .auto {
+    overflow: auto;
+  }
+</style>
+</head>
+
+<body>
+
+<h2>Overflow: visible</h2>
+<div class="container visible">
+  This content is larger than the container and is displayed outside its boundaries. This content is larger than the container and is displayed outside its boundaries. The content is not clipped, and no scrollbars are present.
+</div>
+
+<h2>Overflow: hidden</h2>
+<div class="container hidden">
+  This content is larger than the container and is clipped. This content is larger than the container and is displayed outside its boundaries. No scrollbars are displayed.
+</div>
+
+<h2>Overflow: scroll</h2>
+<div class="container scroll">
+  This content is larger than the container and is displayed with scrollbars. This content is larger than the container and is displayed outside its boundaries. The scrollbars are always visible.
+</div>
+
+<h2>Overflow: auto</h2>
+<div class="container auto">
+  This content is larger than the container. This content is larger than the container and is displayed outside its boundaries. Scrollbars appear only if the content exceeds the container size.
+</div>
+
+</body>
+</html>

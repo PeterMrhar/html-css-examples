@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>List Style</title>
+<style>
+  /* This unordered list uses uppercase Roman numerals with the list markers positioned outside the text block. */
+  ul.roman {
+    list-style: upper-roman outside;
+  }
+
+  /* This unordered list uses a custom image as the list marker, positioned inside the text block. */
+  ul.custom-image {
+    list-style: url("images/bullet.png") inside;
+  }
+</style>
+</head>
+<body>
+
+<h2>List Style Example</h2>
+
+<!-- This list displays uppercase Roman numerals as the markers, positioned outside the text block. -->
+<ul class="roman">
+  <li>First item styled with uppercase Roman numerals.</li>
+  <li>Second item styled with uppercase Roman numerals.</li>
+  <li>Third item styled with uppercase Roman numerals.</li>
+</ul>
+
+<!-- This list uses a custom image as the marker, positioned inside the text block. -->
+<ul class="custom-image">
+  <li>This item uses a custom image as the bullet.</li>
+  <li>This item uses a custom image as the bullet.</li>
+  <li>This item uses a custom image as the bullet.</li>
+</ul>
+
+</body>
+</html>
