@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example with &lt;template&gt;</title>
+  <style>
+    .warning {
+      border: 2px solid red;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #ffe0e0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>&lt;template&gt; Element – Show Message</h1>
+
+  <button onclick="showMessage()">Show Warning</button>
+
+  <template id="template-warning">
+    <div class="warning">
+      Attention! This message was added later using a template.
+    </div>
+  </template>
+
+  <script>
+    function showMessage() {
+      const template = document.getElementById("template-warning");
+      const content = template.content.cloneNode(true);
+      document.body.appendChild(content);
+    }
+  </script>
+
+</body>
+</html>

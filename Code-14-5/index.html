@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Named and Fallback Colors</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 1.2em;
+    }
+
+    .named {
+      color: purple;
+    }
+
+    .fallback {
+      color: orange; /* fallback */
+      color: color(display-p3 1 0.5 0.3); /* modern */
+    }
+  </style>
+</head>
+<body>
+
+  <p class="named">
+    This text uses the named color <code>rebeccapurple</code>.
+  </p>
+
+  <p class="fallback">
+    This text tries to use a <code>display-p3</code> pinkish color,<br>
+    and falls back to <code>orange</code> if not supported.
+  </p>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Container Queries</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background-color: #f7f7f7;
+    }
+
+.container {
+  container-type: inline-size;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.card {
+  display: flex;
+  gap: 1rem;
+}
+
+.card img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content h2 {
+  margin-top: 0;
+}
+
+/* Container Query applies to .card inside .container */
+@container (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <img src="images/Pascal.png" alt="Example image">
+    <div class="content">
+      <h2>Card Title</h2>
+      <p>This is an example of a flexible layout that responds to the width of the card itself.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog Box</title>
+    <style>
+      dialog {
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+        padding: 1.5rem;
+        width: 300px;
+        text-align: center;
+      }
+
+      dialog::backdrop {
+        background: rgba(0, 0, 0, 0.3); /* zatemnitev ozadja */
+      }
+    </style>
+  </head>
+  <body>
+    <dialog id="myDialog">
+      <p>This is the content of the dialog box.</p>
+      <button onclick="myDialog.close()">Close</button>
+    </dialog>
+    <button onclick="myDialog.showModal()">Show Dialog</button>
+  </body>
+</html>

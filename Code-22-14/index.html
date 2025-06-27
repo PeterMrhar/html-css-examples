@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>@supports or()</title>
+  <style>
+    .box {
+      padding: 20px;
+      background-color: lightgray;
+      text-align: center;
+      margin: 20px;
+    }
+
+    @supports (display: grid) or (display: flex) {
+      .box {
+        background-color: lightseagreen;
+        color: white;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">Grid or Flex supported</div>
+
+</body>
+</html>

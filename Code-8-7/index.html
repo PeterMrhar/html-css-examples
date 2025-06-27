@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>onmousemove Event</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+    }
+    #coordinates {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body onmousemove="showCoordinates(event)">
+
+<h1>Example: onmousemove Event</h1>
+
+<p>Move the mouse across the text to see its position:</p>
+<p id="coordinates">x=0, y=0</p>
+
+<script>
+  function showCoordinates(e) {
+    const x = e.clientX;
+    const y = e.clientY;
+    document.getElementById('coordinates').textContent = 'x=' + x + ', y=' + y;
+  }
+</script>
+
+</body>
+</html>

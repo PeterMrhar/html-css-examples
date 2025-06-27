@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>@supports and()</title>
+  <style>
+    .box {
+      padding: 20px;
+      margin: 20px auto;
+      background-color: lightblue;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    @supports (display: grid) and (gap: 1em) {
+      .box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        background-color: lightgreen;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <div>Item 1</div>
+    <div>Item 2</div>
+  </div>
+
+</body>
+</html>

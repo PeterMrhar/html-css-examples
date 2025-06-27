@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DevTools Practice Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 20px;
+      background-color: #f0f8ff;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    section {
+      margin-top: 30px;
+    }
+
+    .box {
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #e6f7ff;
+      border: 2px dashed #0077cc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: gray;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to DevTools Practice</h1>
+  <p>Edit HTML, change CSS, debug JS, and explore browser tools!</p>
+</header>
+
+<section class="box">
+  <h2>Live HTML Editing</h2>
+  <p>Double-click this text in DevTools → change the content.</p>
+</section>
+
+<section class="box">
+  <h2>CSS Style Tweaking</h2>
+  <p>Try changing padding, font-size, or background-color of this box in DevTools.</p>
+</section>
+
+<section class="box">
+  <h2>Console Interaction</h2>
+  <button onclick="sayHello()">Click me</button>
+  <p>Use the console to run: <code>document.querySelector('h1').textContent = 'Changed!'</code></p>
+</section>
+
+<section class="box">
+  <h2>Network Test</h2>
+  <p>This image is useful for checking load time in the Network tab.</p>
+  <img src="images/Lazy3.jpg" alt="Placeholder">
+</section>
+
+<section class="box">
+  <h2>Intentional JS Error</h2>
+  <p>Check the Console tab for a deliberate JavaScript error.</p>
+</section>
+
+<footer>
+  <p>Try toggling mobile view and adjusting styles for small screens.</p>
+</footer>
+
+<script>
+  // Console test
+  console.log("Hello from DevTools Practice Page!");
+
+  // Function triggered by button
+  function sayHello() {
+    alert("Hi there! You clicked the button.");
+    console.log("Button was clicked!");
+  }
+
+  // Intentional error
+  nonExistentFunction(); // This will throw a ReferenceError
+</script>
+
+</body>
+</html>

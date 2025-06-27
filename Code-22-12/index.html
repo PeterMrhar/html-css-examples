@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>@supports not()</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: lightgray;
+      margin: 20px auto;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+    }
+
+    @supports not (display: grid) {
+      .box {
+        background-color: tomato;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">Not Grid</div>
+
+</body>
+</html>

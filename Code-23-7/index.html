@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Named Slots Example</title>
+</head>
+<body>
+
+  <my-card>
+    <h2 slot="header">Important Notice</h2>
+    <p slot="content">This is the main message.</p>
+    <small slot="footer">Published on July 6, 2025</small>
+  </my-card>
+
+  <script>
+    class MyCard extends HTMLElement {
+      constructor() {
+        super();
+        const shadow = this.attachShadow({ mode: 'open' });
+        shadow.innerHTML = `
+          <style>
+            .card {
+              border: 1px solid #ccc;
+              padding: 15px;
+              border-radius: 8px;
+              font-family: sans-serif;
+              background-color: #f9f9f9;
+            }
+            .header {
+              font-size: 1.2em;
+              color: darkblue;
+              margin-bottom: 8px;
+            }
+            .content {
+              margin-bottom: 8px;
+            }
+            .footer {
+              font-size: 0.8em;
+              color: gray;
+            }
+          </style>
+          <div class="card">
+            <div class="header"><slot name="header"></slot></div>
+            <div class="content"><slot name="content"></slot></div>
+            <div class="footer"><slot name="footer"></slot></div>
+          </div>
+        `;
+      }
+    }
+
+    customElements.define('my-card', MyCard);
+  </script>
+
+</body>
+</html>

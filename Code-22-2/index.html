@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Layout</title>
+<style>
+  .row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .column {
+    flex: 1;
+    background-color: lightblue;
+    padding: 20px;
+    border: 2px solid blue;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /* Responsiveness for screens smaller than 768px */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>Responsive Three-Column Layout</h1>
+
+<div class="row">
+  <div class="column">Column 1</div>
+  <div class="column">Column 2</div>
+  <div class="column">Column 3</div>
+</div>
+
+</body>
+</html>

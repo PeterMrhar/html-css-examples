@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Slot Example - Web Component</title>
+  <style>
+    custom-warning {
+      display: block;
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Slot Example - Web Component</h1>
+
+  <custom-warning>
+    You have exceeded the allowed limit.
+  </custom-warning>
+
+  <custom-warning>
+    Your session is about to expire!
+  </custom-warning>
+
+  <script>
+    class CustomWarning extends HTMLElement {
+      constructor() {
+        super();
+        const shadow = this.attachShadow({ mode: 'open' });
+
+        shadow.innerHTML = `
+          <style>
+            .box {
+              border: 2px solid darkred;
+              background-color: #ffe0e0;
+              padding: 12px;
+              border-radius: 6px;
+              font-family: sans-serif;
+            }
+          </style>
+          <div class="box">
+            <slot></slot>
+          </div>
+        `;
+      }
+    }
+
+    customElements.define('custom-warning', CustomWarning);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modal Dialog</title>
+</head>
+<body>
+
+<dialog id="inputDialog">
+  <form method="dialog">
+    <p>Enter your name:</p>
+    <input type="text" name="name" id="name" required>
+    <menu>
+      <button value="cancel">Cancel</button>
+      <button value="save">Save</button>
+    </menu>
+  </form>
+</dialog>
+
+<button onclick="inputDialog.showModal()">Open Form</button>
+
+<p id="result"></p>
+
+<script>
+  const dialog = document.getElementById("inputDialog");
+  const result = document.getElementById("result");
+
+  dialog.addEventListener("close", () => {
+    if (dialog.returnValue === "save") {
+      const name = dialog.querySelector("#name").value;
+      result.textContent = `Hello, ${name}!`;
+    } else {
+      result.textContent = "Input was cancelled.";
+    }
+  });
+</script>
+
+<main>
+  <h1>Page Content</h1>
+  <p>This is the main content of the page. While the modal dialog is open, it is not accessible.</p>
+</main>
+
+</body>
+</html>

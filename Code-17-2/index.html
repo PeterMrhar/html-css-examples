@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Attribute Selectors</title>
+<style>
+  a[href^="https"] {
+    color: green;
+  }
+
+  img[src$=".png"] {
+    border: 3px solid red;
+  }
+
+  input[type="text"] {
+    background-color: lightyellow;
+  }
+
+  div[class~="warning"] {
+    background-color: pink;
+  }
+
+  p[lang|="nl"] {
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<a href="https://example.com">Secure link</a><br>
+<a href="http://example.com">Unsecure link</a><br>
+
+<img src="images/Lazy1.jpg" alt="Example image"><br>
+<img src="images/Lazy2.png" alt="Another image"><br>
+
+<input type="text" placeholder="Enter your name"><br>
+<input type="email" placeholder="Enter your email"><br>
+
+<div class="warning error">This is a warning!</div>
+
+<p lang="nl-NL">Tekst in het Nederlands.</p>
+<p lang="en">Text in English.</p>
+
+</body>
+</html>

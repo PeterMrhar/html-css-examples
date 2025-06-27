@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table with Fixed Header</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .table-container {
+      max-height: 300px;
+      overflow-y: auto;
+      border: 2px solid #ccc;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      text-align: left;
+      background: white;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      background-color: #0077cc;
+      color: white;
+      z-index: 2;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Subscription Price List with Many Rows</h1>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Subscription Type</th>
+        <th>Duration</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Monthly</td><td>1 month</td><td>€9.99</td></tr>
+      <tr><td>Quarterly</td><td>3 months</td><td>€24.99</td></tr>
+      <tr><td>Yearly</td><td>12 months</td><td>€79.99</td></tr>
+      <tr><td>Half-year</td><td>6 months</td><td>€44.99</td></tr>
+      <tr><td>Two-year</td><td>24 months</td><td>€139.99</td></tr>
+      <tr><td>Trial</td><td>14 days</td><td>€0.00</td></tr>
+      <tr><td>Monthly Premium</td><td>1 month</td><td>€14.99</td></tr>
+      <tr><td>Quarterly Premium</td><td>3 months</td><td>€39.99</td></tr>
+      <tr><td>Yearly Premium</td><td>12 months</td><td>€119.99</td></tr>
+      <tr><td>Two-year Premium</td><td>24 months</td><td>€219.99</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

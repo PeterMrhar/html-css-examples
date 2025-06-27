@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Form</title>
+</head>
+<body>
+
+<form id="feedbackForm" method="post" action="/submit-feedback">
+  <fieldset style="border: none;">
+    <h3>Are you satisfied with this book?</h3>
+    <label><input name="satisfaction" type="radio" value="1" checked> Absolutely.</label><br>
+    <label><input name="satisfaction" type="radio" value="2"> So-so.</label><br>
+    <label><input name="satisfaction" type="radio" value="3"> Peter, you're a fool.</label><br><br>
+
+    <h3>Comments</h3>
+    Please write your comment here:<br>
+    <textarea name="comment" cols="50" rows="5"></textarea><br><br>
+
+    <input type="submit" value="Send">
+  </fieldset>
+</form>
+
+</body>
+</html>

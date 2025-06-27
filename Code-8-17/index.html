@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>onselect Event</title>
+  <style>
+    #message {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<h1>onselect Event</h1>
+
+<input type="text" value="Select part of this text"
+       onselect="document.getElementById('message').textContent = 'You selected some text.'">
+
+<p id="message"></p>
+
+</body>
+</html>

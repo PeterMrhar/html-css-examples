@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minlength and Maxlength Example</title>
+    <style>
+        input:invalid {
+            border: 2px solid red;
+        }
+        input:valid {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Username Input with minlength and maxlength</h1>
+
+<p>The input field requires a username between 5 and 10 characters. If the input length is outside this range, the border will turn red; otherwise, it will turn green.</p>
+
+<form action="#" method="post">
+    <label for="username">Enter your username:</label>
+    <input type="text" id="username" name="username" minlength="5" maxlength="10" required placeholder="Enter 5-10 chars">
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keyboard Events: keydown and keyup</title>
+</head>
+<body>
+
+<h1>Keyboard Events: keydown and keyup</h1>
+
+<textarea onkeydown="showKeyDown(event)" onkeyup="showKeyUp(event)">
+Click inside and press a key!
+</textarea>
+
+<p id="status"></p>
+
+<script>
+  function showKeyDown(e) {
+    document.getElementById('status').textContent =
+      'keydown → Key is pressed: ' + e.key;
+  }
+
+  function showKeyUp(e) {
+    document.getElementById('status').textContent =
+      'keyup → Key was released: ' + e.key;
+  }
+</script>
+
+</body>
+</html>

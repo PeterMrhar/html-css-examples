@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Multi-step Animation</title>
+<style>
+  .square {
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    position: relative;
+    animation-name: squareAnimation;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 10px;
+  }
+
+  @keyframes squareAnimation {
+    0% {
+      left: 0;
+      top: 0;
+      background-color: tomato;
+      transform: rotate(0deg);
+    }
+    25% {
+      left: 200px;
+      top: 0;
+      background-color: gold;
+      transform: rotate(45deg);
+    }
+    50% {
+      left: 200px;
+      top: 200px;
+      background-color: limegreen;
+      transform: rotate(90deg);
+    }
+    75% {
+      left: 0;
+      top: 200px;
+      background-color: deepskyblue;
+      transform: rotate(135deg);
+    }
+    100% {
+      left: 0;
+      top: 0;
+      background-color: tomato;
+      transform: rotate(180deg);
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="square"></div>
+
+</body>
+</html>

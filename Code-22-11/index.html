@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@supports Example</title>
+  <style>
+    .container {
+      border: 3px dashed black;
+      padding: 10px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 10px;
+    }
+
+    /* Fallback for browsers without flexbox support */
+    .box {
+      float: left;
+    }
+
+    @supports (display: flex) {
+      .container {
+        display: flex;
+        justify-content: space-around;
+        background-color: #e0ffe0;
+      }
+
+      .box {
+        float: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Testing `@supports`</h1>
+  <p>If your browser supports Flexbox, you will see a green container and two boxes arranged horizontally with space between them.</p>
+  <p>If your browser does not support Flexbox, the boxes will be stacked vertically using `float`.</p>
+
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+</body>
+</html>

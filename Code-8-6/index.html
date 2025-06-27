@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Events</title>
+</head>
+<body>
+
+<h1>Example: onmouseover and onmouseout</h1>
+
+<img src="images/Pascal.png"
+     alt="Pascal"
+     onmouseover="showMessage('The mouse pointer is over the image.')"
+     onmouseout="showMessage('The mouse pointer has left the image.')">
+
+<p id="message"></p>
+
+<script>
+  function showMessage(text) {
+    document.getElementById('message').textContent = text;
+  }
+</script>
+
+</body>
+</html>

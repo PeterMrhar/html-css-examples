@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contrast Example – WCAG</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2em;
+      background: #f5f5f5;
+    }
+
+    .good-contrast {
+      background-color: #000000;  /* black */
+      color: #ffffff;             /* white */
+      padding: 1em;
+      margin-bottom: 1em;
+    }
+
+    .bad-contrast {
+      background-color: #bbbbbb;  /* light gray */
+      color: #777777;             /* medium gray */
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="good-contrast">
+    This text has a strong contrast ratio (white on black).
+  </div>
+
+  <div class="bad-contrast">
+    This text has low contrast and may be hard to read for some users.
+  </div>
+
+</body>
+</html>

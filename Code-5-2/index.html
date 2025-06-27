@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Empty canvas</title>
+  </head>
+  <body>
+    <h2>Empty canvas</h2>
+
+    <canvas
+      id="myCanvas"
+      width="300"
+      height="200"
+      style="border: 1px solid #000000"
+    </canvas>
+
+    <script>
+      var canv = document.getElementById("myCanvas");
+      var ctx = canv.getContext("2d");
+      ctx.moveTo(50, 100);
+      ctx.lineTo(250, 100);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(150, 100, 50, 0, 2 * Math.PI);
+      ctx.stroke();
+
+      ctx.font = "16px Arial";
+      ctx.fillText("Hello", 130, 170);
+    </script>
+  </body>

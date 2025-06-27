@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Form States</title>
+  <style>
+    input {
+      font-size: 18px;
+      margin: 10px;
+    }
+
+    input[type="checkbox"] {
+      outline: 2px solid red;
+    }
+
+    input:checked {
+      outline: 2px solid green;
+    }
+
+
+
+    input:enabled {
+      background-color: #e0ffe0;
+    }
+
+    input:disabled {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Simple Example of :checked, :enabled and :disabled</h1>
+
+<!-- Example for :checked -->
+<input type="checkbox"> I agree<br>
+
+<!-- Example for :enabled -->
+<input type="text" value="I am active">
+
+<!-- Example for :disabled -->
+<input type="text" value="I am disabled" disabled>
+
+</body>
+</html>
